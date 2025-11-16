@@ -1,11 +1,18 @@
 # 产生一个随机整数1~100 (不要印出来)
+# 让使用者决定范围
 # 让使用者重复输入数字去猜
 # 猜对的话 印出 "终于猜对了"
 # 猜错的话 要告诉他 比答案大/小
+# 印出"猜了几次"
 
 import random
 
-r = random.randint(1, 100)
+start = input('请决定随机数字范围最小值')
+end = input('请决定随机数字范围最大值')
+start = int(start)
+end = int(end)
+
+r = random.randint(start, end)
 count = 0
 while True:
 	count += 1 # count = count + 1         
